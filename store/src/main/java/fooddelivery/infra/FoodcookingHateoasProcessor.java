@@ -12,6 +12,12 @@ public class FoodcookingHateoasProcessor
 
     @Override
     public EntityModel<Foodcooking> process(EntityModel<Foodcooking> model) {
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/accept")
+                .withRel("accept")
+        );
+
         return model;
     }
 }
