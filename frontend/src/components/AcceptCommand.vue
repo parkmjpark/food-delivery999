@@ -7,6 +7,7 @@
 
         <v-card-text>
             <Number label="Id" v-model="value.id" :editMode="editMode"/>
+            <Boolean label="Accept" v-model="value.accept" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -43,6 +44,7 @@
         }),
         created() {
             this.value.id = 0;
+            this.value.accept = false;
         },
         watch: {
         },

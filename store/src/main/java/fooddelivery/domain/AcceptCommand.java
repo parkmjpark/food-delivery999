@@ -11,4 +11,6 @@ public class AcceptCommand {
     @Id
     //@GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+
+    private Boolean accept;
 }
